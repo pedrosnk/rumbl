@@ -3,6 +3,8 @@
 /db
 /deps
 /*.ez
+*.swp
+*.swo
 
 # Generate on crash by the VM
 erl_crash.dump
