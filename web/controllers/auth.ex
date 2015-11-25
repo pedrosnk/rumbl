@@ -25,7 +25,7 @@ defmodule Rumbl.Auth do
   def login_by_username_and_pass(conn, username, given_pass, opts) do
     repo = Keyword.fetch!(opts, :repo)
     user = repo.get_by(Rumbl.User, username: username)
-		#IEx.pry
+    #IEx.pry
     cond do
       user && checkpw(given_pass, user.password_hash) ->
         {:ok, login(conn, user)}
