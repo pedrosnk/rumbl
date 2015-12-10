@@ -1,4 +1,3 @@
-require IEx
 defmodule Rumbl.UserSocket do
   use Phoenix.Socket
   alias Rumbl.Repo
