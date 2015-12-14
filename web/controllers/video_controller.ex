@@ -78,7 +78,7 @@ defmodule Rumbl.VideoController do
   end
 
   defp user_videos user do
-    assoc user, :videos
+    assoc(user, :videos)
   end
 
   defp load_categories conn, _ do
