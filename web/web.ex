@@ -18,8 +18,9 @@ defmodule Rumbl.Web do
 
   def model do
     quote do
-      use Ecto.Model
+      use Ecto.Schema
 
+      import Ecto
       import Ecto.Changeset
       import Ecto.Query, only: [from: 1, from: 2]
     end
@@ -30,7 +31,7 @@ defmodule Rumbl.Web do
       use Phoenix.Controller
 
       alias Rumbl.Repo
-      import Ecto.Model
+      import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
 
       import Rumbl.Router.Helpers
@@ -49,6 +50,8 @@ defmodule Rumbl.Web do
       use Phoenix.HTML
 
       import Rumbl.Router.Helpers
+      import Rumbl.ErrorHelpers
+      import Rumbl.Gettext
     end
   end
 
@@ -66,6 +69,7 @@ defmodule Rumbl.Web do
 
       alias Rumbl.Repo
       import Ecto.Model
+      import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
     end
   end
